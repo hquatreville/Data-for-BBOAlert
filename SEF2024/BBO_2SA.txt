@@ -1,0 +1,50 @@
+BBOalert, Standard French 2NT opening
+#########################################
+#
+#         FROM  SEF 2024
+#
+#########################################
+
+Option, Explications en FRANCAIS
+Alias,Game forcing,Forcing manche
+Alias,and,et
+Alias,card,carte
+Alias, in , à ,
+
+Option
+Alias,2SA,(2N|2C--2D--2N|2D--2H--2N|2D--2S--2N)
+2SA--,	3C, Stayman 4 answers
++,	3D, Texas !H Game forcing
++,	3H, Texas !S Game forcing
++,	3S, Texas !C Game forcing
++,	4C, Texas !D Game forcing
++,	4D, At least 5!H and 5!S
++,	4N, Quantitatif
++,	5S, Choose between 6NT and 7x
++,	5N, Choose your chelem
+
+2SA--3C--,	3D, 2-3!H and 2-3!S
++,	3H, 4-5!H and 2-3!S
++,	3S, 2-3!H and 4-5!S
++,	3N, 4!H and 4!S 
+
+2SA--3D--,  3C, 3+!H
++,	3S, 2!H and 5!S
++,  3N, 2!H
+
+2SA--3H--, 3S, 3+!S
++,  3N, 2!S
+
+2SA--3C--3D--,  3H, 5 cards in !S
++,  3S, 5 cards in !H
+
+2SA--3C--3H--,3S, chelem in !H
+2SA--3C--3S--,4H, chelem in !S
+
+Option, Explications en FRANCAIS
+    
+	2SA--,	3C, Stayman 4 palliers	
+	+,	4D, Au moins 5!H et 5!S
+	+,	4N, Quantitatif
+	+,  5S, Choix entre 6SA et 7x
+	+,	5N, Choix de chelem
