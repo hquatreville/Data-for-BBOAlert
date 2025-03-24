@@ -11,15 +11,19 @@ Alias,and,et
 Alias,card,carte
 Alias, in , à ,
 Alias, bad hand, coup de frein
+Alias, answer, réponse
+Alias, At least, Au moins
 
+######
 Option
+
 Alias,2SA,(2N|2C--2D--2N|2D--2H--2N|2D--2S--2N)
 2SA--,	3C, Stayman 4 answers
 +,	3D, Texas !H Game forcing
 +,	3H, Texas !S Game forcing
 +,	3S, Texas !C Game forcing
 +,	4C, Texas !D Game forcing
-+,	4D, At least 5!H and 5!S
++,	4D, At least 5 cards in !H and 5 cards in !S
 +,	4N, Quantitatif
 +,	5S, Choose between 6NT and 7x
 +,	5N, Choose your chelem
@@ -45,10 +49,7 @@ Alias,2SA,(2N|2C--2D--2N|2D--2H--2N|2D--2S--2N)
 2SA--3S--, 3N, bad hand
 2SA--4C--, 4S, bad hand
 
+####
 Option, Explications en FRANCAIS
-    
-	2SA--,	3C, Stayman 4 réponses	
-	+,	4D, Au moins 5!H et 5!S
-	+,	4N, Quantitatif
-	+,  5S, Choix entre 6SA et 7x
-	+,	5N, Choix de chelem
+2SA--,  5S, Choix entre 6SA et 7x
++,	5N, Choix de chelem
