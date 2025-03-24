@@ -10,6 +10,7 @@ Alias,Game forcing,Forcing manche
 Alias,and,et
 Alias,card,carte
 Alias, in , à ,
+Alias, bad hand, coup de frein
 
 Option
 Alias,2SA,(2N|2C--2D--2N|2D--2H--2N|2D--2S--2N)
@@ -24,16 +25,16 @@ Alias,2SA,(2N|2C--2D--2N|2D--2H--2N|2D--2S--2N)
 +,	5N, Choose your chelem
 
 2SA--3C--,	3D, 2-3!H and 2-3!S
-+,	3H, 4-5!H and 2-3!S
-+,	3S, 2-3!H and 4-5!S
-+,	3N, 4!H and 4!S 
++,	3H, 4-5 cards in !H and 2-3 cards in !S
++,	3S, 2-3 cards in !H and 4-5! cards in S
++,	3N, 4 cards in !H and 4 cards in !S 
 
 2SA--3D--,  3C, 3+!H
-+,	3S, 2!H and 5!S
-+,  3N, 2!H
++,	3S, 2 cards in !H and 5 cards in !S
++,  3N, 2 cards in !H
 
 2SA--3H--, 3S, 3+!S
-+,  3N, 2!S
++,  3N, 2 cards in !S
 
 2SA--3C--3D--,  3H, 5 cards in !S
 +,  3S, 5 cards in !H
@@ -41,9 +42,12 @@ Alias,2SA,(2N|2C--2D--2N|2D--2H--2N|2D--2S--2N)
 2SA--3C--3H--,3S, chelem in !H
 2SA--3C--3S--,4H, chelem in !S
 
+2SA--3S--, 3N, bad hand
+2SA--4C--, 4S, bad hand
+
 Option, Explications en FRANCAIS
     
-	2SA--,	3C, Stayman 4 palliers	
+	2SA--,	3C, Stayman 4 réponses	
 	+,	4D, Au moins 5!H et 5!S
 	+,	4N, Quantitatif
 	+,  5S, Choix entre 6SA et 7x
