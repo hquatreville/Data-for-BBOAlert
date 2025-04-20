@@ -9,7 +9,10 @@ Alias, à, in ,
 Alias, ou, or,
 Alias, et , and ,
 Alias, pas ,not ,
-Alais,SA,NT,
+Alias,SA,NT,
+Alias,DH,TP
+Alias, si , if ,
+Alias, une , a ,
 
 ### mots longs ###
 
@@ -24,6 +27,7 @@ Alias,naturel,natural
 Alias,excentré,unbalanced
 Alias,exactement,exactly
 Alias,faible,weak
+Alias,limite,limit
 Alias,obligatoire,mandatory
 Alias,fitté,fitted
 Alias,indéterminé,somewhere
@@ -31,6 +35,9 @@ Alias,indéterminée,somewhere
 Alias,barrage,preemtion
 Alias,relai,relay
 Alias,possiblement,possibly
+Alias,illimité,unlimited
+Alias,atout,trump
+Alias,contrôle,control
 
 ### deux mots ###
 
@@ -39,13 +46,19 @@ Alias,beau fit,good fit
 Alias,plus long,longer
 Alias,choix entre,choose between
 Alias,toute distribution,any shape
+Alias,pour jouer,to play
+Alias,très belles,very strong
+Alias,belle main,good hand
 
 ### expressions ### 
 
-Alias,Pas de majeure 4ième,no 4-card major
+Alias,pas de majeure 4ième,no 4-card major
+Alias,pas de majeure cinquième,no 5-card major
 Alias,forcing de manche,game forcing
 Alias,coup de frein,bad hand
 Alias,choix de chelem,choose your chelem
 Alias,pour les jouer,to play
+Alias,belles cartes à,good cards in
+Alias,pas de fit,not fitted
 
 Option
