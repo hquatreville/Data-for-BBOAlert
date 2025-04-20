@@ -2,26 +2,41 @@ BBOalert, English translations
 
 Option,Lang FR
 Option,Lang EN
+
+### mots courts ###
+
+Alias, à, in ,
+Alias, ou, or,
+Alias, et , and ,
+Alias, pas ,not ,
+
+### mots longs ###
+
+Alias,carte,card,
 Alias,chicane,void
 Alias régulier,balanced
-Alias,au moins,at least
-Alias,carte,card,
-Alias, à, in ,
-Alias,Pas de majeure 4ième,no 4-card major
-Alias,indéterminée,somewhere
-Alias,forcing de manche,game forcing
 Alias,naturel,natural
-Alias,Naturel,Natural
 Alias,excentré,unbalanced
 Alias,exactement,exactly
 Alias,faible,weak
 Alias,obligatoire,mandatory
 Alias,fitté,fitted
-Alias, ou, or,
-Alias,pas,not
-Alias,beau fit,good fit
+Alias,indéterminé,somewhere
+Alias,indéterminée,somewhere
 Alias,barrage,preemtion
 Alias,relai,relay
 Alias,possiblement,possibly
+
+### deux mots ###
+
+Alias,au moins,at least
+Alias,beau fit,good fit
 Alias,plus long,longer
+
+
+### expressions ### 
+
+Alias,Pas de majeure 4ième,no 4-card major
+Alias,forcing de manche,game forcing
+
 Option
