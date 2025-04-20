@@ -14,6 +14,10 @@ Alais,SA,NT,
 ### mots longs ###
 
 Alias,carte,card,
+Alias,mineur ,minor ,
+Alias,mineure,mineur
+Alias,majeur, major ,
+Alias,majeure,major
 Alias,chicane,void
 Alias régulier,balanced
 Alias,naturel,natural
