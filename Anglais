@@ -9,6 +9,7 @@ Alias, à, in ,
 Alias, ou, or,
 Alias, et , and ,
 Alias, pas ,not ,
+Alais,SA,NT,
 
 ### mots longs ###
 
@@ -32,11 +33,13 @@ Alias,possiblement,possibly
 Alias,au moins,at least
 Alias,beau fit,good fit
 Alias,plus long,longer
-
+Alias,choix entre,choose between
 
 ### expressions ### 
 
 Alias,Pas de majeure 4ième,no 4-card major
 Alias,forcing de manche,game forcing
+Alias,coup de frein,bad hand
+Alias,choix de chelem,choose your chelem
 
 Option
