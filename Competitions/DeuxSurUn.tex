@@ -1,0 +1,660 @@
+\documentclass[a4paper,12pt, french, twocolumn]{article}
+\usepackage[french]{babel}
+
+\PassOptionsToPackage{table}{xcolor}
+\usepackage{onedown}
+\setdefaults{colors=4A, bidlong=off, bidline =0}
+\usepackage{tcolorbox}
+\newcommand{\T}{\Cl}
+\newcommand{\K}{\Di}
+\newcommand{\C}{\He}
+\renewcommand{\P}{\Sp}
+\usepackage{graphicx}\documentclass[a4paper,12pt, french, twocolumn]{article}
+\usepackage[french]{babel}
+
+\PassOptionsToPackage{table}{xcolor}
+\usepackage{onedown}
+\setdefaults{colors=4A, bidlong=off, bidline =0}
+\usepackage{tcolorbox}
+\newcommand{\T}{\Cl}
+\newcommand{\K}{\Di}
+\newcommand{\C}{\He}
+\renewcommand{\P}{\Sp}
+\usepackage{graphicx}
+
+\usepackage[Bjornstrup]{fncychap}
+
+\usepackage{fontspec}
+%\setmainfont{Universalis ADF Std}
+%\setmainfont{liberation Sans}
+\setmainfont{Caladea}
+\newfontfamily{\myfont}{Caladea}[Ligatures = TeX]%[NFSSFamily=cmss]
+\newfontfamily{\sansserif}{liberation Sans}[Ligatures = TeX]
+\bidderfont{\mdseries\myfont}
+\compassfont{\mdseries\sansserif}
+\gamefont{\bfseries\sansserif}
+\legendfont{\mdseries\sansserif}
+\namefont{\mdseries\sansserif}
+\otherfont{\bfseries\sansserif}
+
+
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+\definecolor{apricot}{rgb}{0.98, 0.81, 0.69}
+\definecolor{bananamania}{rgb}{0.98, 0.91, 0.71}
+
+%\usepackage{fourier-otf}
+
+
+\newcommand{\enchbox}[2]{
+\begin{figure}[htbp]
+\vspace{8pt}
+\tcbox[left=0mm,right=0mm,top=0mm,bottom=0mm,boxsep=0mm,
+toptitle=0.5mm,bottomtitle=0.5mm,title=\parenthese{#1}]{%fond vert
+\arrayrulecolor{red!5!black}\renewcommand{\arraystretch}{1.2}%
+\begin{tabular}{ccc}
+ #2
+\end{tabular}
+}
+\vspace{8pt}
+\end{figure}
+}
+
+\rowcolors{1}{bananamania}{white}
+\newcommand{\rb}{\rowcolor{bananamania} }
+\newcommand{\rw}{\rowcolor{white} }
+\newcommand{\ra}{\rowcolor{apricot} }
+
+\tcbset{colframe=red!70!green,colback=white,colupper=orange!50!black,
+fonttitle=\bfseries,nobeforeafter,center title}
+
+\makeatletter
+\renewcommand{\thesection}{\@arabic\c@section}
+\makeatother
+
+\usepackage{expl3}
+\usepackage{xparse}
+
+\ExplSyntaxOn
+
+% Définir une nouvelle commande pour effectuer les substitutions
+\NewDocumentCommand{\replacechars}{mmmmm}
+ {
+  \tl_set:Nn \l_tmpa_tl { #1 }
+  \tl_replace_all:Nnn \l_tmpa_tl { #2 } { #3 }
+  \tl_replace_all:Nnn \l_tmpa_tl { #4 } { #5 }
+  \tl_use:N \l_tmpa_tl
+ }
+
+\ExplSyntaxOff
+
+\newcommand{\parenthese}[1]{%
+\replacechars{#1}{>}{)}{<}{(}%
+}
+
+\newcommand{\VoirChat}[1]
+{}
+
+
+\begin{document}
+
+
+
+ {
+ \centering
+
+ {\huge\bfseries Deux sur Un\par}
+
+ {\Large\itshape Forcing de manche\par}
+}
+
+
+
+
+
+\section*{Introduction}
+Le but de cet article est de résumer ce que propose Alain Levy en ce qui concerne le Deux sur Un forcing de manche à des fins de mémorisations.
+Par ailleurs, BBOAlert utilise les sources de ce document pour produire des alertes automatiques sur BBO. Ce qui est très pratique.
+
+Il reprend les concepts intitulés Grizzly et Fairway.
+
+Je reprend, sans les déformer et sans tenir compte de mes préférences personnelles, les développements propoposés par Alain Levy.
+
+J'utilise la couleur abricot pour indiquer les séquences dont le traitement est très particulier qui nécessitent une mise au point ainsi qu'une mémorisation.
+
+
+
+
+\enchbox{Ouverture de 1\C}
+{
+1\P  & 6HL+ & 4+ cartes à \P \\
+1\NT & 6-11H & semi-forcing  \\
+2\T  & 12H+  & naturel ou fitté \\
+2\K  & 12H+  & naturel \\
+2\C & 8-10DH & 3 cartes à \C ou 4333\\
+2\P & 16H+ & 6 cartes à \P \\
+2\NT & 11-14DH & 3-4 cartes à \C \\
+3\T & 9-11H  & 6 cartes à \T \\
+3\K & 9-11H & 6 cartes à \K \\
+3\C &  8-10DH & 4 cartes à \C \\
+\ra 3\P & 7-10H & 5\C et chicane \T\K ou \P \\
+3\NT & 7-10H & 5 atouts et singleton \P \\
+4\T & 7-10H & 5 atouts et singleton \T \\
+4\K & 7-10H & 5 atouts et singleton \K \\
+4\C & & barrage \\
+4\P && what else ? \\
+4\NT && blackwood \\
+}
+
+\textit{Remarque : La réponse de 2\P sur l'ouverture de 1\C n'est pas traitée dans le tome 1 de l'ouvrage d'Alain Levy. Celui-ci indiquant que toutes les enchères fortes se trouveraient dans le tome 2, j'en ai inféré que cette enchère gardait sa signification traditionnelle d'enchère forte, sous toutes réserves. De toute façon, barrer les mineures avec les majeures serait par ailleurs peu subtil.}
+
+
+\enchbox{Ouverture de 1\P}
+{
+1\NT & 6-11H & semi-forcing  \\
+2\T  & 12H+  & naturel ou fitté \\
+2\K  & 12H+  & 5+ cartes à \K \\
+2\C  & 12H+ & naturel non fitté \\
+2\P & 8-10DH &  3 cartes à \P ou 4333\\
+2\NT & 11-14DH & 3-4 cartes à \P \\
+3\T & 9-11H  & 6 cartes à \T \\
+3\K & 9-11H & 6 cartes à \K \\
+3\C &  9-11H & 6 cartes à \C \\
+3\P & 8-10DH & 4 cartes à \P \\
+\ra 3\NT & 7-10H & 5\P et chicane \T\K ou \C  \\
+4\T & 7-10H & 5 atouts et singleton \T \\
+4\K & 7-10H & 5 atouts et singleton \K \\
+4\C & 7-10H & 5 atouts et singleton \C \\
+4\P & & barrage
+}
+
+\section*{1\NT semi-forcing}
+
+Il y a quelques séquences dont Alain levy ne précise pas la signification dans son ouvrage. Ce sont 1\P--1\NT--2\T--3\C et 1\P--1\NT--2\K--3\C. La logique d'Alain Levy conduirait à penser qu'il s'agit d'un 5-5 \T\C dans le premier cas et d'un 5-5 \K-\C dans le second, dans la zone forte (9)10-11H. Comme ce n'est pas explicité, je n'ai pas fait mention d'une telle possibilité dans les tableaux ci-contre.
+Sur ouverture de 1\C.
+
+Il est à noté que les traitem\documentclass[a4paper,12pt, french, twocolumn]{article}
+\usepackage[french]{babel}
+
+\PassOptionsToPackage{table}{xcolor}
+\usepackage{onedown}
+\setdefaults{colors=4A, bidlong=off, bidline =0}
+\usepackage{tcolorbox}
+\newcommand{\T}{\Cl}
+\newcommand{\K}{\Di}
+\newcommand{\C}{\He}
+\renewcommand{\P}{\Sp}
+\usepackage{graphicx}
+
+\usepackage[Bjornstrup]{fncychap}
+
+\usepackage{fontspec}
+%\setmainfont{Universalis ADF Std}
+%\setmainfont{liberation Sans}
+\setmainfont{Caladea}
+\newfontfamily{\myfont}{Caladea}[Ligatures = TeX]%[NFSSFamily=cmss]
+\newfontfamily{\sansserif}{liberation Sans}[Ligatures = TeX]
+\bidderfont{\mdseries\myfont}
+\compassfont{\mdseries\sansserif}
+\gamefont{\bfseries\sansserif}
+\legendfont{\mdseries\sansserif}
+\namefont{\mdseries\sansserif}
+\otherfont{\bfseries\sansserif}
+
+
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+\definecolor{apricot}{rgb}{0.98, 0.81, 0.69}
+\definecolor{bananamania}{rgb}{0.98, 0.91, 0.71}
+
+%\usepackage{fourier-otf}
+
+
+\newcommand{\enchbox}[2]{
+\begin{figure}[htbp]
+\vspace{8pt}
+\tcbox[left=0mm,right=0mm,top=0mm,bottom=0mm,boxsep=0mm,
+toptitle=0.5mm,bottomtitle=0.5mm,title=\parenthese{#1}]{%fond vert
+\arrayrulecolor{red!5!black}\renewcommand{\arraystretch}{1.2}%
+\begin{tabular}{ccc}
+ #2
+\end{tabular}
+}
+\vspace{8pt}
+\end{figure}
+}
+
+\rowcolors{1}{bananamania}{white}
+\newcommand{\rb}{\rowcolor{bananamania} }
+\newcommand{\rw}{\rowcolor{white} }
+\newcommand{\ra}{\rowcolor{apricot} }
+
+\tcbset{colframe=red!70!green,colback=white,colupper=orange!50!black,
+fonttitle=\bfseries,nobeforeafter,center title}
+
+\makeatletter
+\renewcommand{\thesection}{\@arabic\c@section}
+\makeatother
+
+\usepackage{expl3}
+\usepackage{xparse}
+
+\ExplSyntaxOn
+
+% Définir une nouvelle commande pour effectuer les substitutions
+\NewDocumentCommand{\replacechars}{mmmmm}
+ {
+  \tl_set:Nn \l_tmpa_tl { #1 }
+  \tl_replace_all:Nnn \l_tmpa_tl { #2 } { #3 }
+  \tl_replace_all:Nnn \l_tmpa_tl { #4 } { #5 }
+  \tl_use:N \l_tmpa_tl
+ }
+
+\ExplSyntaxOff
+
+\newcommand{\parenthese}[1]{%
+\replacechars{#1}{>}{)}{<}{(}%
+}
+
+\newcommand{\VoirChat}[1]
+{}
+
+
+\begin{document}
+
+
+
+ {
+ \centering
+
+ {\huge\bfseries Deux sur Un\par}
+
+ {\Large\itshape Forcing de manche\par}
+}
+
+
+
+
+
+\section*{Introduction}
+Le but de cet article est de résumer ce que propose Alain Levy en ce qui concerne le Deux sur Un forcing de manche à des fins de mémorisations.
+Par ailleurs, BBOAlert utilise les sources de ce document pour produire des alertes automatiques sur BBO. Ce qui est très pratique.
+
+Il reprend les concepts intitulés Grizzly et Fairway.
+
+Je reprend, sans les déformer et sans tenir compte de mes préférences personnelles, les développements propoposés par Alain Levy.
+
+J'utilise la couleur abricot pour indiquer les séquences dont le traitement est très particulier qui nécessitent une mise au point ainsi qu'une mémorisation.
+
+
+
+
+\enchbox{Ouverture de 1\C}
+{
+1\P  & 6HL+ & 4+ cartes à \P \\
+1\NT & 6-11H & semi-forcing  \\
+2\T  & 12H+  & naturel ou fitté \\
+2\K  & 12H+  & naturel \\
+2\C & 8-10DH & 3 cartes à \C ou 4333\\
+2\P & 16H+ & 6 cartes à \P \\
+2\NT & 11-14DH & 3-4 cartes à \C \\
+3\T & 9-11H  & 6 cartes à \T \\
+3\K & 9-11H & 6 cartes à \K \\
+3\C &  8-10DH & 4 cartes à \C \\
+\ra 3\P & 7-10H & 5\C et chicane \T\K ou \P \\
+3\NT & 7-10H & 5 atouts et singleton \P \\
+4\T & 7-10H & 5 atouts et singleton \T \\
+4\K & 7-10H & 5 atouts et singleton \K \\
+4\C & & barrage \\
+4\P && what else ? \\
+4\NT && blackwood \\
+}
+
+\textit{Remarque : La réponse de 2\P sur l'ouverture de 1\C n'est pas traitée dans le tome 1 de l'ouvrage d'Alain Levy. Celui-ci indiquant que toutes les enchères fortes se trouveraient dans le tome 2, j'en ai inféré que cette enchère gardait sa signification traditionnelle d'enchère forte, sous toutes réserves. De toute façon, barrer les mineures avec les majeures serait par ailleurs peu subtil.}
+
+
+\enchbox{Ouverture de 1\P}
+{
+1\NT & 6-11H & semi-forcing  \\
+2\T  & 12H+  & naturel ou fitté \\
+2\K  & 12H+  & 5+ cartes à \K \\
+2\C  & 12H+ & naturel non fitté \\
+2\P & 8-10DH &  3 cartes à \P ou 4333\\
+2\NT & 11-14DH & 3-4 cartes à \P \\
+3\T & 9-11H  & 6 cartes à \T \\
+3\K & 9-11H & 6 cartes à \K \\
+3\C &  9-11H & 6 cartes à \C \\
+3\P & 8-10DH & 4 cartes à \P \\
+\ra 3\NT & 7-10H & 5\P et chicane \T\K ou \C  \\
+4\T & 7-10H & 5 atouts et singleton \T \\
+4\K & 7-10H & 5 atouts et singleton \K \\
+4\C & 7-10H & 5 atouts et singleton \C \\
+4\P & & barrage
+}
+
+\section*{1\NT semi-forcing}
+
+Il y a quelques séquences dont Alain levy ne précise pas la signification dans son ouvrage. Ce sont 1\P--1\NT--2\T--3\C et 1\P--1\NT--2\K--3\C. La logique d'Alain Levy conduirait à penser qu'il s'agit d'un 5-5 \T\C dans le premier cas et d'un 5-5 \K-\C dans le second, dans la zone forte (9)10-11H. Comme ce n'est pas explicité, je n'ai pas fait mention d'une telle possibilité dans les tableaux ci-contre.
+Sur ouverture de 1\C.
+
+Il est à noté que les traitements des ouvertures de 1\C et des ouvertures de 1\P sont très différents de bien des manières.
+
+
+\enchbox{1\C--1\NT}
+{
+\rw 2\T && 4 cartes  \\
+ou  && 14H+ 4522 3523 ou 2533 \\
+-> & 2\K & naturel 6-9H \\
+-> & 2\C &préférence \\
+\ra -> & 2\P & fit \T 10-11 \\
+-> & 2\NT & 10-11H \\
+-> & 3\T & naturel 8-9H \\
+-> & 3\C & singleton \C \\
+2\K && 4 cartes ou 14H+ 3532 \\
+2\C && 6 cartes 11-15H \\
+-> & 2\P & artificiel 10-11H régulier \\
+-> & 2\NT & bicolore mineur \\
+-> & 3\T & 6-9H naturel \\
+-> & 3\K & 6-9H naturel \\
+\ra -> & 3\C & 11H singleton \C \\
+}
+
+\enchbox{1\P--1\NT}
+{
+2\T && 4 cartes ou 14H+ et 3 cartes \\
+-> & 2\C & 6-9H  6 cartes\\
+-> & 2\K & texas \C facultatif \\
+\rw ->-> && 2\C : 2+ cartes à \C \\
+\rw ->-> && 2\P : court à \C \\
+-> & 2\NT & 10-11H \\
+\rb -> & 3\T & 8-9H naturel \\
+-> & 3\K & 6-9 cartes \\
+\rb -> & 3\P & 10-11H fit \T honneur second\\
+-> & 3\NT &  10-11H fit \T singleton \P\\
+2\K && 4 cartes ou 14H+ 5332 \\
+\rw -> & 2\NT & 10-11H \\
+->-> && 3\C : 3 cartes 14H+ \\
+2\C && 4 cartes \\
+2\P && 6 cartes \\
+-> & 2\NT & 10-11H ou faible avec des \T \\
+->-> && 3\T : relai obligatoire \\
+-> & 3\T & bicolore mineur\\
+\rb -> & 3\K & 6-9H naturel \\
+-> & 3\C & 6-9H naturel \\
+\ra -> & 3\P & 11H singleton \P \\
+}
+
+\enchbox{1\P--1\NT--2\NT--3\T}
+{
+\Pass && pour les jouer \\
+3\K && force à \K \\
+3\C && force à \C \\
+3\P && limite de manche \\
+}
+
+\end{document}
+
+ents des ouvertures de 1\C et des ouvertures de 1\P sont très différents de bien des manières.
+
+
+\enchbox{1\C--1\NT}
+{
+\rw 2\T && 4 cartes  \\
+ou  && 14H+ 4522 3523 ou 2533 \\
+-> & 2\K & naturel 6-9H \\
+-> & 2\C &préférence \\
+\ra -> & 2\P & fit \T 10-11 \\
+-> & 2\NT & 10-11H \\
+-> & 3\T & naturel 8-9H \\
+-> & 3\C & singleton \C \\
+2\K && 4 cartes ou 14H+ 3532 \\
+2\C && 6 cartes 11-15H \\
+-> & 2\P & artificiel 10-11H régulier \\
+-> & 2\NT & bicolore mineur \\
+-> & 3\T & 6-9H naturel \\
+-> & 3\K & 6-9H naturel \\
+\ra -> & 3\C & 11H singleton \C \\
+}
+
+\enchbox{1\P--1\NT}
+{
+2\T && 4 cartes ou 14H+ et 3 cartes \\
+-> & 2\C & 6-9H  6 cartes\\
+-> & 2\K & texas \C facultatif \\
+\rw ->-> && 2\C : 2+ cartes à \C \\
+\rw ->-> && 2\P : court à \C \\
+-> & 2\NT & 10-11H \\
+\rb -> & 3\T & 8-9H naturel \\
+-> & 3\K & 6-9 cartes \\
+\rb -> & 3\P & 10-11H fit \T honneur second\\
+-> & 3\NT &  10-11H fit \T singleton \P\\
+2\K && 4 cartes ou 14H+ 5332 \\
+\rw -> & 2\NT & 10-11H \\
+->-> && 3\C : 3 cartes 14H+ \\
+2\C && 4 cartes \\
+2\P && 6 cartes \\
+-> & 2\NT & 10-11H ou faible avec des \T \\
+->-> && 3\T : relai obligatoire \\
+-> & 3\T & bicolore mineur\\
+\rb -> & 3\K & 6-9H naturel \\
+-> & 3\C & 6-9H naturel \\
+\ra -> & 3\P & 11H singleton \P \\
+}
+
+\enchbox{1\P--1\NT--2\NT--3\T}
+{
+\Pass && pour les jouer \\
+3\K && force à \K \\
+3\C && force à \C \\
+3\P && limite de manche \\
+}
+
+\end{document}
+
+
+
+\usepackage[Bjornstrup]{fncychap}
+
+\usepackage{fontspec}
+%\setmainfont{Universalis ADF Std}
+%\setmainfont{liberation Sans}
+\setmainfont{Caladea}
+\newfontfamily{\myfont}{Caladea}[Ligatures = TeX]%[NFSSFamily=cmss]
+\newfontfamily{\sansserif}{liberation Sans}[Ligatures = TeX]
+\bidderfont{\mdseries\myfont}
+\compassfont{\mdseries\sansserif}
+\gamefont{\bfseries\sansserif}
+\legendfont{\mdseries\sansserif}
+\namefont{\mdseries\sansserif}
+\otherfont{\bfseries\sansserif}
+
+
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+\definecolor{apricot}{rgb}{0.98, 0.81, 0.69}
+\definecolor{bananamania}{rgb}{0.98, 0.91, 0.71}
+
+%\usepackage{fourier-otf}
+
+
+\newcommand{\enchbox}[2]{
+\begin{figure}[htbp]
+\vspace{8pt}
+\tcbox[left=0mm,right=0mm,top=0mm,bottom=0mm,boxsep=0mm,
+toptitle=0.5mm,bottomtitle=0.5mm,title=\parenthese{#1}]{%fond vert
+\arrayrulecolor{red!5!black}\renewcommand{\arraystretch}{1.2}%
+\begin{tabular}{ccc}
+ #2
+\end{tabular}
+}
+\vspace{8pt}
+\end{figure}
+}
+
+\rowcolors{1}{bananamania}{white}
+\newcommand{\rb}{\rowcolor{bananamania} }
+\newcommand{\rw}{\rowcolor{white} }
+\newcommand{\ra}{\rowcolor{apricot} }
+
+\tcbset{colframe=red!70!green,colback=white,colupper=orange!50!black,
+fonttitle=\bfseries,nobeforeafter,center title}
+
+\makeatletter
+\renewcommand{\thesection}{\@arabic\c@section}
+\makeatother
+
+\usepackage{expl3}
+\usepackage{xparse}
+
+\ExplSyntaxOn
+
+% Définir une nouvelle commande pour effectuer les substitutions
+\NewDocumentCommand{\replacechars}{mmmmm}
+ {
+  \tl_set:Nn \l_tmpa_tl { #1 }
+  \tl_replace_all:Nnn \l_tmpa_tl { #2 } { #3 }
+  \tl_replace_all:Nnn \l_tmpa_tl { #4 } { #5 }
+  \tl_use:N \l_tmpa_tl
+ }
+
+\ExplSyntaxOff
+
+\newcommand{\parenthese}[1]{%
+\replacechars{#1}{>}{)}{<}{(}%
+}
+
+\newcommand{\VoirChat}[1]
+{}
+
+
+\begin{document}
+
+
+
+ {
+ \centering
+
+ {\huge\bfseries Deux sur Un\par}
+
+ {\Large\itshape Forcing de manche\par}
+}
+
+
+
+
+
+\section*{Introduction}
+Le but de cet article est de résumer ce que propose Alain Levy en ce qui concerne le Deux sur Un forcing de manche à des fins de mémorisations.
+Par ailleurs, BBOAlert utilise les sources de ce document pour produire des alertes automatiques sur BBO. Ce qui est très pratique.
+
+Il reprend les concepts intitulés Grizzly et Fairway.
+
+Je reprend, sans les déformer et sans tenir compte de mes préférences personnelles, les développements propoposés par Alain Levy.
+
+J'utilise la couleur abricot pour indiquer les séquences dont le traitement est très particulier qui nécessitent une mise au point ainsi qu'une mémorisation.
+
+
+
+
+\enchbox{Ouverture de 1\C}
+{
+1\P  & 6HL+ & 4+ cartes à \P \\
+1\NT & 6-11H & semi-forcing  \\
+2\T  & 12H+  & naturel ou fitté \\
+2\K  & 12H+  & naturel \\
+2\C & 8-10DH & 3 cartes à \C ou 4333\\
+2\P & 16H+ & 6 cartes à \P \\
+2\NT & 11-14DH & 3-4 cartes à \C \\
+3\T & 9-11H  & 6 cartes à \T \\
+3\K & 9-11H & 6 cartes à \K \\
+3\C &  8-10DH & 4 cartes à \C \\
+\ra 3\P & 7-10H & 5\C et chicane \T\K ou \P \\
+3\NT & 7-10H & 5 atouts et singleton \P \\
+4\T & 7-10H & 5 atouts et singleton \T \\
+4\K & 7-10H & 5 atouts et singleton \K \\
+4\C & & barrage \\
+4\P && what else ? \\
+4\NT && blackwood \\
+}
+
+\textit{Remarque : La réponse de 2\P sur l'ouverture de 1\C n'est pas traitée dans le tome 1 de l'ouvrage d'Alain Levy. Celui-ci indiquant que toutes les enchères fortes se trouveraient dans le tome 2, j'en ai inféré que cette enchère gardait sa signification traditionnelle d'enchère forte, sous toutes réserves. De toute façon, barrer les mineures avec les majeures serait par ailleurs peu subtil.}
+
+
+\enchbox{Ouverture de 1\P}
+{
+1\NT & 6-11H & semi-forcing  \\
+2\T  & 12H+  & naturel ou fitté \\
+2\K  & 12H+  & 5+ cartes à \K \\
+2\C  & 12H+ & naturel non fitté \\
+2\P & 8-10DH &  3 cartes à \P ou 4333\\
+2\NT & 11-14DH & 3-4 cartes à \P \\
+3\T & 9-11H  & 6 cartes à \T \\
+3\K & 9-11H & 6 cartes à \K \\
+3\C &  9-11H & 6 cartes à \C \\
+3\P & 8-10DH & 4 cartes à \P \\
+\ra 3\NT & 7-10H & 5\P et chicane \T\K ou \C  \\
+4\T & 7-10H & 5 atouts et singleton \T \\
+4\K & 7-10H & 5 atouts et singleton \K \\
+4\C & 7-10H & 5 atouts et singleton \C \\
+4\P & & barrage
+}
+
+\section*{1\NT semi-forcing}
+
+Il y a quelques séquences dont Alain levy ne précise pas la signification dans son ouvrage. Ce sont 1\P--1\NT--2\T--3\C et 1\P--1\NT--2\K--3\C. La logique d'Alain Levy conduirait à penser qu'il s'agit d'un 5-5 \T\C dans le premier cas et d'un 5-5 \K-\C dans le second, dans la zone forte (9)10-11H. Comme ce n'est pas explicité, je n'ai pas fait mention d'une telle possibilité dans les tableaux ci-contre.
+Sur ouverture de 1\C.
+
+Il est à noté que les traitements des ouvertures de 1\C et des ouvertures de 1\P sont très différents de bien des manières.
+
+
+\enchbox{1\C--1\NT}
+{
+\rw 2\T && 4 cartes  \\
+ou  && 14H+ 4522 3523 ou 2533 \\
+-> & 2\K & naturel 6-9H \\
+-> & 2\C &préférence \\
+\ra -> & 2\P & fit \T 10-11 \\
+-> & 2\NT & 10-11H \\
+-> & 3\T & naturel 8-9H \\
+-> & 3\C & singleton \C \\
+2\K && 4 cartes ou 14H+ 3532 \\
+2\C && 6 cartes 11-15H \\
+-> & 2\P & artificiel 10-11H régulier \\
+-> & 2\NT & bicolore mineur \\
+-> & 3\T & 6-9H naturel \\
+-> & 3\K & 6-9H naturel \\
+\ra -> & 3\C & 11H singleton \C \\
+}
+
+\enchbox{1\P--1\NT}
+{
+2\T && 4 cartes ou 14H+ et 3 cartes \\
+-> & 2\C & 6-9H  6 cartes\\
+-> & 2\K & texas \C facultatif \\
+\rw ->-> && 2\C : 2+ cartes à \C \\
+\rw ->-> && 2\P : court à \C \\
+-> & 2\NT & 10-11H \\
+\rb -> & 3\T & 8-9H naturel \\
+-> & 3\K & 6-9 cartes \\
+\rb -> & 3\P & 10-11H fit \T honneur second\\
+-> & 3\NT &  10-11H fit \T singleton \P\\
+2\K && 4 cartes ou 14H+ 5332 \\
+\rw -> & 2\NT & 10-11H \\
+->-> && 3\C : 3 cartes 14H+ \\
+2\C && 4 cartes \\
+2\P && 6 cartes \\
+-> & 2\NT & 10-11H ou faible avec des \T \\
+->-> && 3\T : relai obligatoire \\
+-> & 3\T & bicolore mineur\\
+\rb -> & 3\K & 6-9H naturel \\
+-> & 3\C & 6-9H naturel \\
+\ra -> & 3\P & 11H singleton \P \\
+}
+
+\enchbox{1\P--1\NT--2\NT--3\T}
+{
+\Pass && pour les jouer \\
+3\K && force à \K \\
+3\C && force à \C \\
+3\P && limite de manche \\
+}
+
+\end{document}
+
