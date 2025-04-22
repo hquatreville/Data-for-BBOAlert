@@ -1,0 +1,5 @@
+// BBOalert, Deux sur Un forcing de manche version Alain Levy
+
+Import,https://github.com/stanmaz/BBOalert/blob/master/Scripts/setTeachingTable.js
+
+Import,https://github.com/hquatreville/Data-for-BBOAlert/blob/main/Competitions/DeuxSurUn.tex
