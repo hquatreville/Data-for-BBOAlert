@@ -36,7 +36,7 @@
 
 \newcommand{\enchbox}[2]{
 \begin{figure}[htbp]
-\vspace{8pt}
+%\vspace{1pt}
 \tcbox[left=0mm,right=0mm,top=0mm,bottom=0mm,boxsep=0mm,
 toptitle=0.5mm,bottomtitle=0.5mm,title=\parenthese{#1}]{%fond vert
 \arrayrulecolor{red!5!black}\renewcommand{\arraystretch}{1.2}%
@@ -44,7 +44,7 @@ toptitle=0.5mm,bottomtitle=0.5mm,title=\parenthese{#1}]{%fond vert
  #2
 \end{tabular}
 }
-\vspace{8pt}
+%\vspace{1pt}
 \end{figure}
 }
 
@@ -83,25 +83,20 @@ fonttitle=\bfseries,nobeforeafter,center title}
 \newcommand{\VoirChat}[1]
 {}
 
+\title{Deux sur Un\par \textit{Forcing de manche}}
+\date{}
+\author{}
 
 \begin{document}
 
 
-
- {
- \centering
-
- {\huge\bfseries Deux sur Un\par}
-
- {\Large\itshape Forcing de manche\par}
-}
-
+\maketitle
 
 
 
 
 \section*{Introduction}
-Le but de cet article est de résumer ce que propose Alain Levy en ce qui concerne le Deux sur Un forcing de manche à des fins de mémorisations.
+Le but de cet article est de résumer ce que propose Alain Levy en ce qui concerne le Deux sur Un forcing de manche à des fins de mémorisation.
 Par ailleurs, BBOAlert utilise les sources de ce document pour produire des alertes automatiques sur BBO. Ce qui est très pratique.
 
 Il reprend les concepts intitulés Grizzly et Fairway.
@@ -114,13 +109,13 @@ Je reprend, sans les déformer et sans tenir compte de mes préférences personn
 
 Le système Y prévoir beaucoup de modifications par rapport au SEF2024.
 
-En premier lieu, il utilise les JumpLimit. Ces enchères, redoutablement efficaces ont remplacé les Bergen aux USA depuis plus de vingt ans. Tous les sauts simples au niveau de 3 montent un unicolore limite de manche. Ces enchères ont l'avantage d'aller chercher une manche rapidement sans laisser au joueur numéro 4 l'opportunité d'intervenir. Il y a 5 séquences concernées 1\C--3\T, 1\C--3\K, 1\P--3\T, 1\P--3\K et 1\P--3C. Ces séquences remplacent leschangement de couleur avec répétition du SEF2024. Typiquement, la séquence 1\P--2\T--2\P--3\T du SEF2024 est remplacée par 1\P--3\T en système Y.
+En premier lieu, il utilise les JumpLimit. Ces enchères, redoutablement efficaces ont remplacé les Bergen aux USA depuis plus de vingt ans. Tous les sauts simples au niveau de 3 montent un unicolore limite de manche. Ces enchères ont l'avantage d'aller chercher une manche rapidement sans laisser au joueur numéro 4 l'opportunité d'intervenir. Il y a 5 séquences concernées 1\C--3\T, 1\C--3\K, 1\P--3\T, 1\P--3\K et 1\P--3\C. Ces séquences remplacent leschangement de couleur avec répétition du SEF2024. Typiquement, la séquence 1\P--2\T--2\P--3\T du SEF2024 est remplacée par 1\P--3\T en système Y.
 
 Le deuxième changement est la suppression du soutien à 3\NT qui entre dans le cadre des splinters. Le soutien fitté 2\NT devient bivalent. Il s'utilise avec les jeux limite de manche comme en SEF2024 mais aussi avec les mains banales de manche sans singleton de 12-14H. Ce système est proposé par Argine sur Funbridge depuis des années.
 
-Le troisième changement est l'enchère \textit{semi-forcing }de 1\NT. Comme souvent, au bridge, les appellations sont trompeuses. Semi-forcing veut dire non forcing. En effet, les partisans du deux sur un forcing de manche se divisent en deux camp. Les partisans du 1\NT forcing, incluant quelques mains fortes, typiquement certains soutiens, et les partisans du 1\NT non forcing. En France, une majorité d'experts préfèrent jouer 1\NT non forcing. Le seul point à alerté ici, c'est la zone de points qui va jusque 11H.
+Le troisième changement est l'enchère \textit{semi-forcing }de 1\NT. Comme souvent, au bridge, les appellations sont trompeuses. Semi-forcing veut dire non forcing. En effet, les partisans du deux sur un forcing de manche se divisent en deux camps. Les partisans du 1\NT forcing, incluant quelques mains fortes, typiquement certains soutiens, et les partisans du 1\NT non forcing. En France, une majorité d'experts préfèrent jouer 1\NT non forcing. L'enchère est limitée à 11H et non pas à 10H.
 
-\textit{Remarque : La réponse de 2\P sur l'ouverture de 1\C n'est pas traitée dans le tome 1 de l'ouvrage d'Alain Levy. Celui-ci indiquant que toutes les enchères fortes se trouveraient dans le tome 2, j'en ai inféré que cette enchère gardait sa signification traditionnelle d'enchère forte, sous toutes réserves. De toute façon, barrer les mineures avec les majeures serait par ailleurs peu subtil.}
+\textit{Remarque : La réponse de 2\P sur l'ouverture de 1\C n'est pas traitée dans le tome 1 de l'ouvrage d'Alain Levy. Celui-ci indiquant que toutes les enchères fortes se trouveraient dans le tome 2, j'en ai inféré que cette enchère gardait sa signification traditionnelle d'enchère forte, sous toutes réserves.}
 
 \enchbox{Ouverture de 1\C}
 {
@@ -162,13 +157,12 @@ Le troisième changement est l'enchère \textit{semi-forcing }de 1\NT. Comme sou
 4\C & 7-10H & 5 atouts et singleton \C \\
 4\P & & barrage
 }
-
 \section*{1\NT semi-forcing}
 
-Il y a quelques séquences dont Alain levy ne précise pas la signification dans son ouvrage. Ce sont 1\P--1\NT--2\T--3\C et 1\P--1\NT--2\K--3\C. La logique d'Alain Levy conduirait à penser qu'il s'agit d'un 5-5 \T\C dans le premier cas et d'un 5-5 \K-\C dans le second, dans la zone forte (9)10-11H. Comme ce n'est pas explicité, je n'ai pas fait mention d'une telle possibilité dans les tableaux ci-contre.
+Il y a quelques séquences dont Alain levy ne précise pas la signification dans son ouvrage. Ce sont 1\P--1\NT--2\T--3\C et 1\P--1\NT--2\K--3\C. La logique du système Y conduirait à penser qu'il s'agit d'un 5-5 \T-\C dans le premier cas et d'un 5-5 \K-\C dans le second, dans la zone forte 10-11H. Comme ce n'est pas explicité, je n'ai pas fait mention d'une telle possibilité dans les tableaux ci-contre.
 
-Si on joue le système Y complet, la séquence 1\C--1\NT--2\T promet 5 cartes. En effet, avec une main 4522, jusqu'à 13H, on passe tranquillement sur 1\NT.
-Et à partir de 14H, Alain Levy propose d'ouvrir de 1\NT les mains 4522. Sur le Texas et le Stayman, ça ne pose aucun problème particulier. Sur le Puppet, on dispose de la réponse gadget à 3\NT pour montrer ce 4522.
+Si on joue le système Y complet, la séquence 1\C--1\NT--2\T promet 3 cartes à \T. En effet, avec une main 4522, jusqu'à 13H, on passe tranquillement sur 1\NT.
+Et à partir de 14H, Alain Levy propose d'ouvrir de 1\NT les mains 4522. Sur le Texas et le Stayman, ça ne pose aucun problème particulier. Sur le Puppet, on dispose de la réponse gadget à 3\NT pour montrer ce type de main.
 C'est pourquoi, dans le tableau, j'ai mis cette possibilité entre parenthèses.
 
 
@@ -178,9 +172,9 @@ Il y a beaucoup de difficultés dans ces séquences.
 
 Les redemandes du répondant à 3\T et 3\K sont toujours naturelles. Les enchères \textit{impossibles}\footnote{Les enchères dites impossibles servent à indiquer un soutien anormalement puissant dans la deuxième couleur de l'ouvreur} commencent à 3\P (éventuellement 3\C) sur ouverture de 1\P et à 3\C sur ouverture de 1\C.
 
-D'autre part, le traitement de l'ouverture de 1\C est différent à plusieurs égards de celui de l'ouverture de 1\P. Après ouverture de 1\C, le répondant peut faire une enchère \textit{impossible} à 2\P. D'autre part, le traitement des jeux réguliers et des bicolores mineurs se fait à l'italienne lorsque l'ouvreur répète sa couleur. 1\C--1\NT--2\C--2\P et 1\P--1\NT--2\P--2\NT indiquent un jeu régulier de 10-11H. 1\C--1\NT--2\C--2\NT et 1\P--1\NT--2\P--3\T indiquent un bicolore mineur. Mnémotechniquement, il faut utiliser la logique italienne. Première enchère disponible avec 10-11H et deuxième enchère disponible avec le bicolore.
+D'autre part, le traitement de l'ouverture de 1\C est différent à plusieurs égards de celui de l'ouverture de 1\P. Après ouverture de 1\C, le répondant peut faire une enchère \textit{impossible} à 2\P. D'autre part, le traitement des jeux réguliers et des bicolores mineurs se fait à l'italienne lorsque l'ouvreur répète sa couleur. 1\C--1\NT--2\C--2\P et 1\P--1\NT--2\P--2\NT indiquent un jeu régulier de 10-11H. 1\C--1\NT--2\C--2\NT et 1\P--1\NT--2\P--3\T indiquent un bicolore mineur. Mnémoniquement, il faut utiliser la logique italienne. Première enchère disponible avec 10-11H et deuxième enchère disponible avec le bicolore.
 
-Dans la suite de son ouvrage, Alain Levy utilise beaucoup la logique italienne, notamment pour nommer certains singletons. La première enchère disponible indiquant le singleton le plus économique, et la deuxième indiquant le singleton plus cher. Cette logique est  peu pratiquée en France où on préfère la logique de substitution. On annonce explicitement le singleton et l'enchère impossible montre le singleton inexprimable. Ce qui pose problème quand il y a deux singletons tous les deux inexprimables, cas rarissime où on se rabat sur la logique italienne.
+
 
 
 
@@ -288,9 +282,265 @@ Dans la suite de son ouvrage, Alain Levy utilise beaucoup la logique italienne, 
 }
 
 \section*{Soutien différé au palier de 2}
+%_1H--2C--2D--, 2H, 3 cartes à !H et 15DH+
 %_1S--2C--2D--, 2S, 3 cartes à !S et 15DH+
+%_1S--2C--2H--, 2S, 3 cartes à !S et 15DH+
+%_1S--2D--2H--, 2S, 3 cartes à !S et 15DH+
 
-Le changement de couleur à 2\T peut se faire avec 2 cartes à \T seulement.
+Le changement de couleur à 2\T peut se faire avec 2 cartes à \T seulement si c'est dans le but de donner un soutien différé au niveau de deux.
+Celui-ci promet 3 atouts et 15DH+ avec tout type de distribution. Cette enchère est prioritaire sur les changements de couleur à 2\K ou 2\C. Ce qui signifie que sur ouverture de 1\P, le répondant peut répondre 2\T avec 5 cartes à \K ou avec 5 cartes à \C lorsqu'il possède 3 atouts et au moins 15DH.
+
+Ce soutien bénéficie de développements sophistiqués. La logique des singletons est celle d'Alain Levy. Tantôt, il préfère nommer le résidu, tantôt il préfère nommer le singleton.
+Mnémoniquement, il nomme le résidu quand celui-ci est contrôlé et il nomme le singleton quand le résidu est médiocre.  On constate que les splinter s directs ont pour fonction de dissuader le répondant d'aller au chelem.
+
+
+
+\enchbox{1\P--2\T--2\K--2\P}
+{
+2\NT & 14H+ & toute distribution \\
+-> & 3\T & relai \\
+->-> & 3\K & court à \T pas de contrôle \C\\
+->-> & 3\C & court à \C pas de contrôle \T\ \\
+->-> & 3\P & 17H+ 5242\\
+->-> & 3\NT & 14-16H 5242\\
+3\T &11H+& contrôle \T et singleton \C \\
+3\K &11H+& 5-5 \\
+3\C &11H+& contrôle \C et singleton \T \\
+3\P &11H+& 6-4 \\
+3\NT &11-13H& 5242 \\
+4\T &11-13H& court à \T pas de contrôle \C\\\
+4\K &11H+& 6-5 \\
+4\C & 11-13H & court à \C pas de contrôle \T\ \\
+}
+
+\enchbox{1\P--2\K--2\C--2\P}
+{
+2\NT & 14H+ & toute distribution \\
+-> & 3\T & relai \\
+->-> & 3\K & court à \K pas de contrôle \T\\
+->-> & 3\C & court à \T pas de contrôle \K\ \\
+->-> & 3\P & 17H+ 5242\\
+->-> & 3\NT & 14-16H 5242\\
+3\T &11H+& contrôle \T et singleton \K \\
+3\K &11H+& contrôle \K et singleton \T \\
+3\C &11H+& 5-5 \\4\T && 6 cartes à \P et singleton \T \\
+3\P &11H+& 6-4 \\
+3\NT &11-13H& 5242 \\
+4\T &11-13H& court à \T pas de contrôle \K\\\
+4\K &11-13H& court à \K pas de contrôle \T\ \\
+4\C & 11-13H & 6-5 \\
+}
+
+\enchbox{1\C--2\T--2\K--2\C}
+{
+2\P  &11H+& contrôle \P et singleton \T\\
+2\NT & 14H+ & toute distribution \\
+-> & 3\T & relai \\
+->-> & 3\K & court à \T pas de contrôle \P\\
+->-> & 3\C & court à \P pas de contrôle \T\ \\
+->-> & 3\P & 17H+ 2542\\
+->-> & 3\NT & 14-16H 2542\\
+3\T &11H+& contrôle \T et singleton \P \\
+3\K &11H+& 5-5 \\
+3\C &11H+& 6-4 \\
+3\P &11H+& court à \P pas de contrôle \T\\\
+3\NT &11-13h& 5242  \\
+4\T &11-13H& court à \T pas de contrôle \P\\\
+4\K &11H+& 6-5 \\
+}
+
+\section{Majeure répétée}
+
+En système Y, la redemande de l'ouvreur à 2\NT promet 17H+ ce qui a pour conséquence qu'après un changement de couleur au palier de deux, la redemande poubelle de l'ouvreur quand il n'a rien à dire est lé répétition de sa majeure.
+C'est donc l'enchère la plus fréquente. Cette enchère peut cacher une main forte avec 6 cartes laides qui ne permettent pas un saut. Typiquement \hand{Q98762}{AK8}{AK6}{Q}.
+
+Les soutiens différés au palier de 3 sont réservés aux mains structurées. Ainsi 1\P--2\T--2\P--3\P promet 5 belles cartes à \T (et bien sûr au moins 16DH, l'équivalent des 17HLD du SEF). Ainsi, l'ouvreur peut juger correctement sa main.
+Avec la même distribution et une main un peu plus faible, le répondant conclu à 4\P.
+
+Avec une main forte mais non structurée, le répondant, s'il veut en savoir plus sur la main de l'ouvreur utilise l'enchère joker de 2\NT. Il sera toujours temps de donner le fit plus tard. L'ouvreur se décrit et c'est le répondant qui juge sa main. L'enchère de 2\NT, quoi qu'il arrive promet deux cartes dans la majeure  de l'ouvreur, ce qui donne :
+
+%_1S--2C--2S--, 2N, 2+ cartes à !S
+%_1S--2D--2S--, 2N, 2+ cartes à !S
+%_1S--2H--2S--, 2N, 2+ cartes à !S
+%_1H--2C--2H--, 2N, 2+ cartes à !H
+%_1H--2D--2H--, 2N, 2+ cartes à !H
+
+\enchbox{1\C--2\T--2\C--2\NT}
+{
+3\T && 6 cartes à \C et singleton \T \\
+3\K && 6 cartes à \C et singleton \K \\
+3\C  && 6 cartes sans singleton \\
+3\P && 6 cartes à \C et singleton \P \\
+3\NT && régulier \\
+}
+
+\enchbox{1\P--2\T--2\P--2\NT}
+{
+3\T && 6 cartes à \P et singleton \T \\
+3\K && 6 cartes à \P et singleton \K \\
+3\C && 6 cartes à \P et singleton \C \\
+3\P  && 6 cartes sans singleton \\
+3\NT && régulier \\
+}
+
+Il est à noté que la répétition des \C dénie 4 cartes à \P de sorte que si le répondant fait une redemande à 2\P, cela montre un arrêt franc mais pas nécessairement 4 cartes. Cette enchère, facultative, permet à l'ouvreur de donner toutes les informations aux répondant pour décider du bon contrat.
+
+
+\enchbox{1\C--2\T--2\C--2\P}
+{
+2\NT && arrêt à \K 5 cartes à \C\\
+3\T  && problème \K 5 cartes à \C\\
+3\K  && 6 cartes à \C et arrêt \K \\
+->  & 3\P & transfert pour 3\NT \\
+3\C && 6 cartes à \C problème \K \\
+3\P && 3631 problème à \K \\4\T && 6 cartes à \P et singleton \T \\
+3\NT && 6 cartes à \C et arrêt \K \\
+}
+
+\section*{Bicolore économique \C-\P}
+
+Est-il utile de rappeler qu'en DeuxSurUn les séquences 1\C--2\T--2\P et 1\C--2\K--2\P deviennent des bicolores économiques. De plus, avec les deux majeurs, on ouvre souvent à 11H. Et avec un 4522 de 14-16H, Alain levy préconise d'ouvrir de 1\NT.
+En conséquence, l'enchère sera bien plus souvent faible que forte ! Qu'importe puisque l'enchère de 2\T (ou de 2\K) a déjà imposé la manche.
+
+Sur un relai éventuel à 2\NT, le déclarant raconte sa vie. Ce relai garantissant 2 cartes à \C, toutes les enchères de l'ouvreur montrant 6 cartes impose l'atout, Sur la réponse de 3\C, si le répondant annonce le contrôle pique, l'ouvreur, qui a nécessairement les deux contrôles mineurs , montre son singleton. Les splinters faibles dénient
+
+
+
+\enchbox{1\C--2\T--2\P--2\NT}
+{
+3\T && 3 cartes à \T \\
+3\K && 3 cartes à \K \\
+3\C && 6-4 doubleton contrôlé \\
+-> & 3\P & chelem à \C  ?\\
+->-> &4\T & singleton \T \\
+->-> & 4\K & singleton \K \\
+3\P && 6-5 \\
+3\NT&& 4522 \\
+4\T && splinter, pas de contrôle \K  \\
+4\K && splinter, pas de contrôle \T  \\
+}
+
+\section*{Après 2\T}
+
+La redemande à 3\NT est très spéciale. Elle indique un fit \T très fort avec un singleton.
+
+\enchbox{1\C--2\T}
+{
+2\K & & bicolore économique \\4\T && 6 cartes à \P et singleton \T \\
+2\C & & wait and see \\
+2\P & & bicolore économique \\
+2\NT && 17H+ régulier ou 2524 \\
+3\T && 12-16H 4 cartes \\
+3\K && 5-5 fort \\
+3\C && autofit \\
+3\P && 6-5 \\
+3\NT && 17H+ 1534 ou 3514 \\
+->  & 4\T & relai \\
+->-> & 4\K & singleton \K \\
+->-> & 4\C & singleton \P \\
+}
+
+\enchbox{1\P--2\T}
+{
+2\K & & bicolore économique \\
+2\C & & bicolore économique \\
+2\P & & wait and see \\
+2\NT && 17H+ régulier ou 2524 \\
+3\T && 12-16H 4 cartes \\
+3\K && 5-5 fort \\
+3\C && 5-5 fort \\
+3\P && autofit \\
+3\NT && 17H+ 5134 ou 5314 \\
+->  & 4\T & relai \\
+->-> & 4\K & singleton \K \\
+->-> & 4\C & singleton \C \\
+}
+
+\section*{Après 2\K}
+
+La réponse 2\K est plus complexe à gérer que la réponse 2\T
+
+\enchbox{1\C--2\K}
+{
+2\C && wait and see \\
+2\P && bicolore économique \\
+2\NT & 17-19 & régulier \\
+3\K & 12-16H& 3+ cartes à \K excentré\\
+3\NT & 17-20 & 4+ cartes à \K + singleton \\
+
+->  & 4\T & relai \\
+->-> & 4\K & singleton \T \\
+->-> & 4\C & singleton \P \\
+}
+
+Danger : sur la redemande de l'ouvreur à 3\NT. Alain levy annonce les singletons à l'italienne. Sur un relai à 4\T, 4\K indique le singleton le plus économique et 4\C indique le singleton le plus cher
+
+
+\enchbox{1\P--2\K}
+{
+2\P && wait and see \\
+2\NT & 17-19 & régulier \\
+3\K & 12-16 & 3+ cartes à \K excentré\\
+3\NT & 17-20 & 4+ cartes à \K + singleton \\
+->  & 4\T & relai \\
+->-> & 4\K & singleton \T \\
+->-> & 4\C & singleton \C \\
+}
+
+\enchbox{1\C--2\K--2\C--2\NT}
+{
+3\T && 5 cartes à \C et 4+ cartes à \T \\
+3\K && 6 cartes à \C et singleton \K \\
+3\C && 6 cartes à \C sans courte \\
+3\P && 6 cartes à \P et singleton \P \\
+3\NT&& 5332 \\
+4\T && 6 cartes à \C et singleton \T \\
+}
+
+\enchbox{1\P--2\K--2\P--2\NT}
+{
+3\T && 5 cartes à \P et 4+ cartes à \T \\
+3\K && 6 cartes à \P et singleton \K \\
+3\C && 6 cartes à \P et singleton \C \\
+3\P && 6 cartes à \P sans courte \\
+3\NT&& 5332 \\
+4\T && 6 cartes à \P et singleton \T \\
+}
+
+\section*{Après 2\C}
+
+La situation est encore plus complexe. L'ouvreur doit pouvoir nommer
+ses bicolores, ses singletons et un éventuels singleton \C. Il est important de souligner que, avec 5 cartes à \P et un soutien \C, l'ouvreur montre son soutien immédiatement sans répéter les piques. Il y a tout juste la place pour tout faire.
+\\
+\enchbox{1\P--2\C--2\P--2\NT}
+{3\T && 5 cartes à \P et 4+ cartes à \T \\
+3\K && 5 cartes à \P et 4+ cartes à \K \\
+3\C && 6 cartes à \P et singleton \C \\
+3\P && 6 cartes à \P sans courte \\
+3\NT&& 5332 \\
+4\T && 6 cartes à \P et singleton \T \\
+4\K && 6 cartes à \P et singleton \K \\
+4\C && 6 cartes à \P et 3 cartes à \C \\
+}
+\enchbox{1\P--2\C}
+{
+2\P && wait and see \\
+2\NT & 17H+ & régulier \\
+3 \C & 12-16H & 3 ou 4 cartes\\
+3\NT & 17H+ & 4 cartes à \C + singleton \\
+->  & 4\T & relai \\
+->-> & 4\K & singleton \T \\
+->-> & 4\C & singleton \K \\
+4\T  &12-16& splinter  \\
+4\K 12-16& splinter  \\
+4\C &12-16& 5422 \\
+}
+
+\textit{Danger : sur la redemande de l'ouvreur à 3\NT. Alain Levy annonce les singletons à l'italienne. Sur un relai à 4\T, 4\K indique le singleton le plus économique et 4\C indique le singleton le plus cher. Dans la plupart des séquences, cela ne change rien. Mais ici c'est dangereux puisque 4\K indique un singleton \T et 4\C indique un singleton \K. Dont acte !}
+
+\section*{Mains structurées}
+
+\section*{Séquences naturelles}
 
 
 \end{document}
