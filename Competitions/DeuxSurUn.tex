@@ -99,7 +99,7 @@ fonttitle=\bfseries,nobeforeafter,center title}
 Le but de cet article est de résumer ce que propose Alain Levy en ce qui concerne le Deux sur Un forcing de manche à des fins de mémorisation.
 Par ailleurs, BBOAlert utilise les sources de ce document pour produire des alertes automatiques sur BBO. Ce qui est très pratique.
 
-Il reprend les concepts intitulés Grizzly et Fairway.
+Il reprend les concepts intitulés Grizzly.
 
 Je reprend, sans les déformer et sans tenir compte de mes préférences personnelles, les développements proposés par Alain Levy.
 
@@ -388,12 +388,13 @@ Il est à noté que la répétition des \C dénie 4 cartes à \P de sorte que si
 
 \enchbox{1\C--2\T--2\C--2\P}
 {
-2\NT && arrêt à \K 5 cartes à \C\\
-3\T  && problème \K 5 cartes à \C\\
+2\NT && 5 cartes à \C et arrêt \k\\
+3\T  && 5 cartes à \C, pas d'arrêt \K\\
 3\K  && 6 cartes à \C et arrêt \K \\
 ->  & 3\P & transfert pour 3\NT \\
-3\C && 6 cartes à \C problème \K \\
-3\P && 3631 problème à \K \\4\T && 6 cartes à \P et singleton \T \\
+3\C && 6 cartes à \C, pas d'arrêt \K \\
+3\P && 3631 pas d'arrêt \K
+\\4\T && 6 cartes à \P singleton \T \\
 3\NT && 6 cartes à \C et arrêt \K \\
 }
 
@@ -473,8 +474,6 @@ La réponse 2\K est plus complexe à gérer que la réponse 2\T
 ->-> & 4\C & singleton \P \\
 }
 
-Danger : sur la redemande de l'ouvreur à 3\NT. Alain levy annonce les singletons à l'italienne. Sur un relai à 4\T, 4\K indique le singleton le plus économique et 4\C indique le singleton le plus cher
-
 
 \enchbox{1\P--2\K}
 {
@@ -492,10 +491,12 @@ Danger : sur la redemande de l'ouvreur à 3\NT. Alain levy annonce les singleton
 3\T && 5 cartes à \C et 4+ cartes à \T \\
 3\K && 6 cartes à \C et singleton \K \\
 3\C && 6 cartes à \C sans courte \\
-3\P && 6 cartes à \P et singleton \P \\
-3\NT&& 5332 \\
-4\T && 6 cartes à \C et singleton \T \\
+3\P && 6 cartes à \C et singleton \P \\
+4\T && 6 cartes à \P et singleton \T \\
 }
+
+
+
 
 \enchbox{1\P--2\K--2\P--2\NT}
 {
@@ -513,7 +514,8 @@ La situation est encore plus complexe. L'ouvreur doit pouvoir nommer
 ses bicolores, ses singletons et un éventuels singleton \C. Il est important de souligner que, avec 5 cartes à \P et un soutien \C, l'ouvreur montre son soutien immédiatement sans répéter les piques. Il y a tout juste la place pour tout faire.
 \\
 \enchbox{1\P--2\C--2\P--2\NT}
-{3\T && 5 cartes à \P et 4+ cartes à \T \\
+{
+3\T && 5 cartes à \P et 4+ cartes à \T \\
 3\K && 5 cartes à \P et 4+ cartes à \K \\
 3\C && 6 cartes à \P et singleton \C \\
 3\P && 6 cartes à \P sans courte \\
@@ -522,6 +524,7 @@ ses bicolores, ses singletons et un éventuels singleton \C. Il est important de
 4\K && 6 cartes à \P et singleton \K \\
 4\C && 6 cartes à \P et 3 cartes à \C \\
 }
+
 \enchbox{1\P--2\C}
 {
 2\P && wait and see \\
@@ -538,9 +541,92 @@ ses bicolores, ses singletons et un éventuels singleton \C. Il est important de
 
 \textit{Danger : sur la redemande de l'ouvreur à 3\NT. Alain Levy annonce les singletons à l'italienne. Sur un relai à 4\T, 4\K indique le singleton le plus économique et 4\C indique le singleton le plus cher. Dans la plupart des séquences, cela ne change rien. Mais ici c'est dangereux puisque 4\K indique un singleton \T et 4\C indique un singleton \K. Dont acte !}
 
+\section{Soutien de l'ouvreur}
+
+
+\enchbox{1\C--2\T--3\T}
+{
+3\C && impose l'atout \\
+-> & 3\P  & contrôle \P et singleton \K \\
+-> & 3\NT & singleton sans contrôle \\
+-> & 4\T  & 5422 14-16H \\
+-> & 4\K  & contrôle \K singleton \P \\
+-> & 4\C  & 5422 11-13H \\
+}
+4\T && 6 cartes à \P et singleton \T \\
+\enchbox{1\C--2\T--3\T--3\C--3\NT}
+{
+4\T && relai \\
+-> & 4\K & singleton \K \\
+-> & 4\C & singleton \P \\
+}
+
+\enchbox{1\C--2\K--3\K}
+{
+3\C && impose l'atout \\
+-> & 3\P  & contrôle \P et singleton \T \\
+-> & 3\NT & singleton sans contrôle \\
+-> & 4\T  & contrôle \T singleton \P \\
+-> & 4\K  & 5422 14-16H \\
+-> & 4\C  & 5422 11-13H \\4\T && 6 cartes à \P et singleton \T \\
+}
+
+\enchbox{1\C--2\K--3\K--3\C--3\NT}
+{
+4\T && relai \\
+-> & 4\K & singleton \T \\
+-> & 4\C & singleton \P \\
+}
+
+\enchbox{1\P--2\T--3\T}
+{
+3\P && impose l'atout \\
+-> & 3\NT & singleton sans contrôle \\
+-> & 4\T  & 5422 14-16H \\
+-> & 4\K  & contrôle \K singleton \C \\
+-> & 4\C  & contrôle \C singleton \K \\
+-> & 4\P  & 5422 11-13H \\
+}
+
+\enchbox{1\P--2\T--3\T--3\P--3\NT}
+{
+4\T && relai \\
+-> & 4\K & singleton \K \\
+-> & 4\C & singleton \C \\
+}
+
+\enchbox{1\P--2\K--3\K}
+{
+3\P && impose l'atout \\
+-> & 3\NT & singleton sans contrôle \\
+-> & 4\K  & 5422 14-16H \\
+-> & 4\T  & contrôle \T singleton \C \\
+-> & 4\C  & contrôle \C singleton \T \\
+-> & 4\P  & 5422 11-13H \\
+}
+
+\enchbox{1\P--2\K--3\K--3\P--3\NT}
+{
+4\T && relai \\
+-> & 4\K & singleton \T\\
+-> & 4\C & singleton \C \\
+}
+
 \section*{Mains structurées}
 
+Les soutiens différés au palier de 3 promettent 18DH et une belle mineure 5\ieme.
+Avec une main plus faible, le répondant soutient au niveau de 4 ou un splinter.
+%_1S--(2C|2D|2H)--(2D|2H|2S)--, 3H, 18DH couleur secondaire 5\ième
+%_1S--(2C|2D|2H)--(2D|2H|2S)--, (4C|4D), splinter
+%_1H--(2C|2D)--(2D|2H)--, 3H, 18DH couleur secondaire 5\ième
+%_1H--(2C|2D)--(2D|2H)--, 3H, (4C|4D), splinter
+
 \section*{Séquences naturelles}
+
+Le saut à 3\NT comme redemande du répondant indique une main de 12-14H, singleton dans la couleur de l'ouvreur.
+
+La redemande à 2\NT promet deux cartes dans la couleur de l'ouvreur. l'enchère de Joker sans enchère naturelle et la suite est pragmatique.
+
 
 
 \end{document}
