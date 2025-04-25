@@ -1,5 +1,63 @@
 // BBOalert, Deux sur Un forcing de manche version Alain Levy
 
+//BBOalert, Set Teaching Table v1.3.1
+//Script,setTeachingTable
+var delayValue = 500;
+Promise.resolve()
+// press "Home" button
+.then(() => $("nav-bar button", BBOcontext()).eq(1).click())
+.then(() => delay(delayValue))
+// close dialog box if any
+.then(() => $("server-prompt button",window.parent.document).eq(0).click())
+.then(() => delay(delayValue))
+// Press "Practice" button
+.then(() => $(".menuGrid navigation-list-button .navClass", BBOcontext()).eq(4).click())
+.then(() => delay(delayValue))
+// press "Start a Teaching table"
+.then(() => $(".menuGrid navigation-list-button .navClass:visible", BBOcontext()).eq(1).click())
+.then(() => delay(delayValue*2))
+// click table switches. Eventually remove unwanted portions of code.
+.then(() => $("table-options-panel .optionGrid ion-toggle", BBOcontext()).click())
+.then(() => delay(delayValue))
+// press "Start Table" button
+.then(() => $("start-table-screen .buttonRowClass button", BBOcontext()).eq(2).click())
+.then(() => delay(3000))
+// set your user ID in all four directions
+// "South"
+.then(() => $("bridge-screen .nameDisplayClass", BBOcontext()).eq(0).click())
+.then(() => delay(delayValue))
+.then(() => $("bridge-screen menu-item", BBOcontext()).eq(0).children().click())
+.then(() => delay(delayValue))
+// "West"
+.then(() => $("bridge-screen .nameDisplayClass", BBOcontext()).eq(1).click())
+.then(() => delay(delayValue))
+.then(() => $("bridge-screen menu-item", BBOcontext()).eq(0).children().click())
+.then(() => delay(delayValue))
+// "North"
+.then(() => $("bridge-screen .nameDisplayClass", BBOcontext()).eq(2).click())
+.then(() => delay(delayValue))
+.then(() => $("bridge-screen menu-item", BBOcontext()).eq(0).children().click())
+.then(() => delay(delayValue))
+// "East"
+.then(() => $("bridge-screen .nameDisplayClass", BBOcontext()).eq(3).click())
+.then(() => delay(delayValue))
+.then(() => $("bridge-screen menu-item", BBOcontext()).eq(0).children().click())
+
+function delay(duration) {
+return new Promise((resolve) => {
+setTimeout(resolve, duration);
+});
+}
+//Script
+/*
+// set your user ID in all four directions
+// "South"
+//    .then(() => $(".nameBarClass :contains(South - Sit!)", BBOcontext()).eq(0).click()).then(() => delay(delayValue))
+//   .then(() => $("bridge-screen menu-item", BBOcontext()).eq(0).children().click()).then(() => delay(delayValue))
+
+Shortcut,STT,%setTeachingTable%
+*/
+
 
 \enchbox{Ouverture de 1\C}
 1H
@@ -194,12 +252,13 @@
 1S--2C--2S--2N--,3!N,régulier
 \enchbox{1\C--2\T--2\C--2\P}
 1H--2C--2H--2S
-1H--2C--2H--2S--,2!N,arrêt à !D 5 cartes à !H
-1H--2C--2H--2S--,3!C,problème !D 5 cartes à !H
+1H--2C--2H--2S--,2!N,5 cartes à !H et arrêt k
+1H--2C--2H--2S--,3!C,5 cartes à !H; pas d'arrêt !D
 1H--2C--2H--2S--,3!D,6 cartes à !H et arrêt !D
 1H--2C--2H--2S--3!D--,3!S,transfert pour 3!N
-1H--2C--2H--2S--,3!H,6 cartes à !H problème !D
-1H--2C--2H--2S--,3!S,3631 problème à !D 4!C 6 cartes à !S et singleton !C
+1H--2C--2H--2S--,3!H,6 cartes à !H; pas d'arrêt !D
+1H--2C--2H--2S--,3!S,3631 pas d'arrêt !D
+1H--2C--2H--2S--,4!C,6 cartes à !S singleton !C
 1H--2C--2H--2S--,3!N,6 cartes à !H et arrêt !D
 \enchbox{1\C--2\T--2\P--2\NT}
 1H--2C--2S--2N
@@ -265,9 +324,8 @@
 1H--2D--2H--2N--,3!C,5 cartes à !H et 4+ cartes à !C
 1H--2D--2H--2N--,3!D,6 cartes à !H et singleton !D
 1H--2D--2H--2N--,3!H,6 cartes à !H sans courte
-1H--2D--2H--2N--,3!S,6 cartes à !S et singleton !S
-1H--2D--2H--2N--,3!N,5332
-1H--2D--2H--2N--,4!C,6 cartes à !H et singleton !C
+1H--2D--2H--2N--,3!S,6 cartes à !H et singleton !S
+1H--2D--2H--2N--,4!C,6 cartes à !S et singleton !C
 \enchbox{1\P--2\K--2\P--2\NT}
 1S--2D--2S--2N
 1S--2D--2S--2N--,3!C,5 cartes à !S et 4+ cartes à !C
@@ -278,7 +336,7 @@
 1S--2D--2S--2N--,4!C,6 cartes à !S et singleton !C
 \enchbox{1\P--2\C--2\P--2\NT}
 1S--2H--2S--2N
-1S--2H--2S--2N--,{3!C,5 cartes à !S et 4+ cartes à !C
+1S--2H--2S--2N--,3!C,5 cartes à !S et 4+ cartes à !C
 1S--2H--2S--2N--,3!D,5 cartes à !S et 4+ cartes à !D
 1S--2H--2S--2N--,3!H,6 cartes à !S et singleton !H
 1S--2H--2S--2N--,3!S,6 cartes à !S sans courte
@@ -298,6 +356,62 @@
 1S--2H--,4!C,12-16 splinter
 1S--2H--,4!D,12-16 splinter
 1S--2H--,4!H,12-16 5422
+\enchbox{1\C--2\T--3\T}
+1H--2C--3C
+1H--2C--3C--,3!H,impose l'atout
+1H--2C--3C--3!H--,3!S,contrôle !S et singleton !D
+1H--2C--3C--3!H--,3!N,singleton sans contrôle
+1H--2C--3C--3!H--,4!C,5422 14-16H
+1H--2C--3C--3!H--,4!D,contrôle !D singleton !S
+1H--2C--3C--3!H--,4!H,5422 11-13H
+\enchbox{1\C--2\T--3\T--3\C--3\NT}
+1H--2C--3C--3H--3N
+1H--2C--3C--3H--3N--,4!C,relai
+1H--2C--3C--3H--3N--4!C--,4!D,singleton !D (2C|2D)--(2D|2H
+1H--2C--3C--3H--3N--4!C--,4!H,singleton !S
+\enchbox{1\C--2\K--3\K}
+1H--2D--3D
+1H--2D--3D--,3!H,impose l'atout
+1H--2D--3D--3!H--,3!S,contrôle !S et singleton !C
+1H--2D--3D--3!H--,3!N,singleton sans contrôle
+1H--2D--3D--3!H--,4!C,contrôle !C singleton !S
+1H--2D--3D--3!H--,4!D,5422 14-16H
+1H--2D--3D--3!H--,4!H,5422 11-13H 4!C 6 cartes à !S et singleton !C
+\enchbox{1\C--2\K--3\K--3\C--3\NT}
+1H--2D--3D--3H--3N
+1H--2D--3D--3H--3N--,4!C,relai
+1H--2D--3D--3H--3N--4!C--,4!D,singleton !C
+1H--2D--3D--3H--3N--4!C--,4!H,singleton !S
+\enchbox{1\P--2\T--3\T}
+1S--2C--3C
+1S--2C--3C--,3!S,impose l'atout
+1S--2C--3C--3!S--,3!N,singleton sans contrôle
+1S--2C--3C--3!S--,4!C,5422 14-16H
+1S--2C--3C--3!S--,4!D,contrôle !D singleton !H
+1S--2C--3C--3!S--,4!H,contrôle !H singleton !D
+1S--2C--3C--3!S--,4!S,5422 11-13H
+\enchbox{1\P--2\T--3\T--3\P--3\NT}
+1S--2C--3C--3S--3N
+1S--2C--3C--3S--3N--,4!C,relai
+1S--2C--3C--3S--3N--4!C--,4!D,singleton !D
+1S--2C--3C--3S--3N--4!C--,4!H,singleton !H
+\enchbox{1\P--2\K--3\K}
+1S--2D--3D
+1S--2D--3D--,3!S,impose l'atout
+1S--2D--3D--3!S--,3!N,singleton sans contrôle
+1S--2D--3D--3!S--,4!D,5422 14-16H
+1S--2D--3D--3!S--,4!C,contrôle !C singleton !H
+1S--2D--3D--3!S--,4!H,contrôle !H singleton !C
+1S--2D--3D--3!S--,4!S,5422 11-13H
+\enchbox{1\P--2\K--3\K--3\P--3\NT}
+1S--2D--3D--3S--3N
+1S--2D--3D--3S--3N--,4!C,relai
+1S--2D--3D--3S--3N--4!C--,4!D,singleton !C
+1S--2D--3D--3S--3N--4!C--,4!H,singleton !H
+1S--2[CDH]--2[DHS]--, 3H, 18DH couleur secondaire 5\ième
+1S--2[CDH]--2[DHS]--, 4[CD], splinter
+1H--2[CD]--2[DH]--, 3H, 18DH couleur secondaire 5\ième
+1H--2[CD]--2[DH])--, 4[CD], splinter
 
 
 
