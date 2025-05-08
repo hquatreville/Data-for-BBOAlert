@@ -3,6 +3,7 @@
 Import,https://github.com/stanmaz/BBOalert/blob/master/Scripts/setTeachingTable.js
 
 Import,https://github.com/hquatreville/Data-for-BBOAlert/blob/main/Anglais
+Alias,3!C à 4!S,(3|4)[CDHS],@G
 
 Import,{RCbase.tex},https://github.com/hquatreville/TrefleRouge/blob/main/Systeme/RCbase.tex
 Import,{RC1T.tex},https://github.com/hquatreville/TrefleRouge/blob/main/Systeme/RC1T.tex
